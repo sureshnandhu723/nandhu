@@ -1,0 +1,28 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Custom utilities */
+
+@layer utilities {
+  /*
+    .no-scroll-mobile:
+    - allows vertical scroll on small screens (mobile)
+    - disables vertical scroll on md and larger
+  */
+  .no-scroll-mobile {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  @media (min-width: 768px) {
+    .no-scroll-mobile {
+      overflow-y: hidden;
+    }
+  }
+}
+
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  overflow-x: hidden;
+}
